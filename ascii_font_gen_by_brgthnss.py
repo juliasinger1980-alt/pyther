@@ -14,13 +14,13 @@ if __name__ == "__main__":
                 dings += 1
         dick[chr(y)] = dings
     sortiert = sorted(dick.items(), key=lambda x: x[1])
-    chars.append(sortiert)
+    chars.append(sortiert) # todes unnoetig
     
-    s = Image.new("RGB", [955, 14], "black")
+    s = Image.new("RGB", [950, 14], "black")
     u = ImageDraw.Draw(s)
-    counter = 1
+    counter = 0
     for zeichen, helligkeit in sortiert:
-        u.text([counter,1], zeichen, "white")
+        u.text([counter,0], zeichen, "white")
         counter += 10
     s.show()
     s.save("font_atlas.png")
