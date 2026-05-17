@@ -6,18 +6,19 @@ import tkinter.font as tkFont
 import time
 import os
 
-os.system("cls")
+os.system("clear")
 
 def record_keys():
     keyboard.start_recording()
-    time.sleep(15)  # Record for 15 seconds
+    time.sleep(15)  # Record fuer 15 secs
     recorded = keyboard.stop_recording()
     time.sleep(1)
     return recorded
 
 class Anzeige:
     def __init__(self, root):
-        keyboard.add_hotkey("q", self.stop)
+        #keyboard.add_hotkey('q', self.stop)
+        root.bind("<KeyPress-q>", lambda e: self.stop())
         self.test = True
         self.root = root
         self.root.title("Keyboard Recorder")
