@@ -57,5 +57,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = Anzeige(root)
     root.mainloop()
-
-
